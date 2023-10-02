@@ -26,8 +26,6 @@ const handleAddContact = (state, action) => {
 const handleDeleteContact = (state, action) =>{
     state.isLoading = false;
     state.error = null;
-    console.log(`ACTION`);
-    console.log(action);
     const index = state.items.findIndex(item => item.id === action.payload.id);
     state.items.splice(index, 1);
 };
